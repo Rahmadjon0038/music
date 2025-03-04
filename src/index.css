@@ -1,0 +1,118 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-auto-rows: 100px;
+    gap: 8px;
+    background-color: black;
+}
+
+.card {
+    border: 2px solid rgb(136, 135, 135);
+    border-radius: 10px;
+}
+
+.header {
+    grid-column: 1/4;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./assets/image.png');
+    color: white;
+}
+
+.header h2 {
+    /* background: linear-gradient(45deg, red, blue); */
+    color: white;
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.main {
+    grid-row: span 4;
+    overflow: hidden;
+}
+
+.sidebar {
+    grid-row: span 4;
+    padding: 5px;
+    overflow: auto;
+}
+
+.footer {
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar h3 {
+    color: white;
+    background: #333;
+    padding: 10px 10px;
+    border-radius: 5px;
+    padding-left: 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: 0.5;
+}
+
+.sidebar h3:hover {
+    background-color: #5a5959;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.footer h1 {
+    color: white;
+    text-align: center;
+    background: linear-gradient(45deg, red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.select {
+    color: red;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fffdfd00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #454649;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #42474a;
+}
