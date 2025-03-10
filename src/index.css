@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,8 +10,8 @@ body {
     margin: 0 auto;
     background-color: black;
 }
-
 .container {
+    position: relative;
     padding: 5px;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -18,7 +19,15 @@ body {
     gap: 20px;
     margin: 10px;
 }
+.ant-dropdown-menu {
+    font-size: 18px !important; /* Matn hajmini kattalashtirish */
+    padding: 10px !important;  /* Ichki padding */
+    min-width: 200px !important; /* Eng kameni uzunligi */
+}
 
+.ant-dropdown-menu-item {
+    padding: 12px 20px !important; /* Har bir menu elementini kattalashtirish */
+  }
 .card {
     border: 2px solid rgb(250, 85, 2);
     /* box-shadow: 0 0 6px rgb(0, 96, 250); */

@@ -14,14 +14,6 @@ function Home() {
     function tanlow(url) {
         setSelect(url)
     }
-
-    const addmusic = () => {
-        const newData = { id: data.length + 1, name: newName, url: newUrl }
-        const response = [...data, newData]
-        setData(response)
-        localStorage.setItem('musicdata', data)
-    }
-
     const getData = async () => {
         try {
             const response = await axios.get('http://localhost:3000/musics')
@@ -33,16 +25,15 @@ function Home() {
     }
 
     useEffect(() => {
-        // getData()
+        getData()
     }, [])
-
     return (
         <div class="container">
+                <Dropdown />
             <div data-aos="fade-down" class="card header">
                 <h1>Alan walker</h1>
             </div>
             <div data-aos="flip-right" class="card sidebar" id="musiclist">
-                <h3 onClick={addmusic}>Add</h3>
                 {data?.map((item) => (
                     <h3 key={item.id} onClick={() => tanlow(item.url)}>{item.id} {item.name}</h3>
                 ))}
@@ -54,7 +45,6 @@ function Home() {
             <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="card footer">
                 <h2>Uthor:Rahmadjon Abdullayev</h2>
             </div>
-            <Dropdown/>
         </div>
 
     )
