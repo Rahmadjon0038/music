@@ -13,7 +13,6 @@ function Addmusic() {
         try {
             const response = await axios.post('http://localhost:3000/musics', newData)
             console.log(response.status)
-
         }
         catch (err) {
             console.log(err)

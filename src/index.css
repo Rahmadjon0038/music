@@ -100,21 +100,6 @@ body {
     height: 100%;
 }
 
-.sidebar h3 {
-    color: white;
-    background: #333;
-    padding: 10px 10px;
-    border-radius: 5px;
-    padding-left: 20px;
-    margin: 10px 5px;
-    cursor: pointer;
-    transition: 0.5;
-}
-
-.sidebar h3:hover {
-    background-color: #5a5959;
-}
-
 
 img {
     width: 100%;
